@@ -1,8 +1,10 @@
 package com.example.tp4contadorconmvp.model
 
+import android.widget.Button
 import com.example.tp4contadorconmvp.contract.CountContract
 
 class CountModel : CountContract.Model {
+
 
     private var count = ZERO
 
@@ -12,10 +14,12 @@ class CountModel : CountContract.Model {
         count = ZERO
     }
 
-//creería que aquí no voy a usar esta constnte ONE
+    //creería que aquí no voy a usar esta constnte ONE
     override fun inc() {
-        count += ONE
+
+        count +=
     }
+
     override fun dec() {
         count +=
     }

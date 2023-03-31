@@ -12,8 +12,10 @@ class CountView(activity: Activity) : ActivityView(activity), CountContract.View
         activity.setContentView(binding.root)
     }
 
+    override fun getNumber() = binding.editTextUser.text
+
     override fun setCount(count: String) {
-        binding.editTextUser.text = count
+        binding.counterResult.text = count
     }
 
     override fun onIncreaseButtonPressed(onClick: () -> Unit) {
@@ -23,6 +25,7 @@ class CountView(activity: Activity) : ActivityView(activity), CountContract.View
     override fun onDecreaseButtonPressed(onClick: () -> Unit) {
         binding.decreaseButton.setOnClickListener { onClick() }
     }
+
     override fun onResetButtonPressed(onClick: () -> Unit) {
         binding.resetButton.setOnClickListener { onClick() }
     }
