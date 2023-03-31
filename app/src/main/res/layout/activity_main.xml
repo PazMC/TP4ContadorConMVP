@@ -10,7 +10,6 @@
         android:id="@+id/title"
         android:layout_width="@dimen/title_layout_width"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:paddingBottom="150dp"
         android:paddingTop="150dp"
         android:background="@color/lime_500"
@@ -21,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/counter_result"/>
 
     <TextView
         android:id="@+id/counter_result"
@@ -31,7 +30,7 @@
         android:text="@string/counter_result"
         android:textAlignment="center"
         android:textSize="@dimen/text_dimension"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
@@ -43,7 +42,6 @@
         android:layout_marginEnd="@dimen/activity_vertical_margin"
         android:layout_height="@dimen/edit_text_layout_height"
         android:hint="@string/edit_text_hint"
-        app:layout_constraintVertical_bias="0.25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/counter_result"
@@ -56,8 +54,8 @@
         android:layout_marginEnd="@dimen/activity_vertical_margin"
         android:layout_height="wrap_content"
         android:text="@string/increase_button_name"
-        app:layout_constraintTop_toBottomOf="@id/counter_result"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_user"
+        app:layout_constraintBottom_toTopOf="@id/decrease_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -68,9 +66,8 @@
         android:layout_marginEnd="@dimen/activity_vertical_margin"
         android:layout_height="wrap_content"
         android:text="@string/decrease_button_name"
-        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintTop_toBottomOf="@id/increase_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reset_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -81,9 +78,9 @@
         android:layout_marginEnd="@dimen/activity_vertical_margin"
         android:layout_height="wrap_content"
         android:text="@string/reset_button_name"
-        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintTop_toBottomOf="@id/decrease_button"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

@@ -1,18 +1,16 @@
 package com.example.tp4contadorconmvp.view
 
 import android.app.Activity
-import android.widget.Toast
+import com.example.tp4contadorconmvp.contract.CountContract
 import com.example.tp4contadorconmvp.databinding.ActivityMainBinding
-import com.example.tp4contadorconmvp.contract.MainContract
+import com.example.tp4contadorconmvp.view.base.ActivityView
 
-class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
+class CountView(activity: Activity) : ActivityView(activity), CountContract.View {
     private var binding: ActivityMainBinding = ActivityMainBinding.inflate(activity.layoutInflater)
 
     init {
         activity.setContentView(binding.root)
     }
-
-
 
     override fun onButtonPressed(onClick: () -> Unit) {
         binding.toastButton.setOnClickListener { onClick() }

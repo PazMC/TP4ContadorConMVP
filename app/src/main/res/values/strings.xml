@@ -2,7 +2,7 @@
     <string name="app_name">TP4Counter</string>
     <string name="text_view_title">PIL Mobile Basics: Counter</string>
     <string name="counter_result">0</string>
-    <string name="edit_text_hint">Write your text here</string>
+    <string name="edit_text_hint">Insert a number</string>
     <string name="increase_button_name">Increase</string>
     <string name="decrease_button_name">Decrease</string>
     <string name="reset_button_name">Reset</string>
