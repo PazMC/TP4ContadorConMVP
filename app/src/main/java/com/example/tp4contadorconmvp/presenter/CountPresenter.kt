@@ -4,8 +4,9 @@ import com.example.tp4contadorconmvp.contract.CountContract
 
 class CountPresenter(private val model: CountContract.Model, private val view: CountContract.View) : CountContract.Presenter {
     init {
-        view.onIncreaseButtonPressed { onIncreaseButtonPressed(view.getText()) }
-        view.onDecreaseButtonPressed { onDecreaseButtonPressed(view.getText()) }
+        view.setCount(view.getText()) { onIncreaseButtonPressed(view.getText()) }
+        view.onIncreaseButtonPressed { onIncreaseButtonPressed() }
+        view.onDecreaseButtonPressed { onDecreaseButtonPressed() }
         view.onResetButtonPressed { onResetButtonPressed() }
     }
 

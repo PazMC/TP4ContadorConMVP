@@ -12,9 +12,18 @@ class CountView(activity: Activity) : ActivityView(activity), CountContract.View
         activity.setContentView(binding.root)
     }
 
-    override fun onButtonPressed(onClick: () -> Unit) {
-        binding.toastButton.setOnClickListener { onClick() }
+    override fun setCount(count: String) {
+        binding.editTextUser.text = count
     }
 
-    override fun getText() = binding.editTextUser.text.toString()
+    override fun onIncreaseButtonPressed(onClick: () -> Unit) {
+        binding.increaseButton.setOnClickListener { onClick() }
+    }
+
+    override fun onDecreaseButtonPressed(onClick: () -> Unit) {
+        binding.decreaseButton.setOnClickListener { onClick() }
+    }
+    override fun onResetButtonPressed(onClick: () -> Unit) {
+        binding.resetButton.setOnClickListener { onClick() }
+    }
 }

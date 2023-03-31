@@ -12,6 +12,7 @@ class CountModel : CountContract.Model {
         count = ZERO
     }
 
+//creería que aquí no voy a usar esta constnte ONE
     override fun inc() {
         count += ONE
     }
