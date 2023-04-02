@@ -12,7 +12,7 @@ class CountView(activity: Activity) : ActivityView(activity), CountContract.View
         activity.setContentView(binding.root)
     }
 
-    override fun getNumber() = binding.editTextUser.text
+    override fun getCount() = binding.numberUser.text.toString()
 
     override fun setCount(count: String) {
         binding.counterResult.text = count

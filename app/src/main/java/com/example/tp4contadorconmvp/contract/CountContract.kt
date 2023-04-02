@@ -9,7 +9,7 @@ interface CountContract {
         fun dec()
     }
     interface View {
-        fun getNumber(): Int
+        fun getCount(): String
         fun setCount(count: String)
         fun onIncreaseButtonPressed(onClick: () -> Unit)
         fun onDecreaseButtonPressed(onClick: () -> Unit)

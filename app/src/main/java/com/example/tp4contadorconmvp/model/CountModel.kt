@@ -1,26 +1,25 @@
 package com.example.tp4contadorconmvp.model
 
-import android.widget.Button
 import com.example.tp4contadorconmvp.contract.CountContract
+import com.example.tp4contadorconmvp.util.Constants.ZERO
 
 class CountModel : CountContract.Model {
 
-
     private var count = ZERO
-
+    private var currentValue = 0
     override fun getCount(): String = count.toString()
 
     override fun reset() {
         count = ZERO
     }
 
-    //creería que aquí no voy a usar esta constnte ONE
     override fun inc() {
-
-        count +=
+        currentValue = getCount().toInt()
+        count += currentValue
     }
 
     override fun dec() {
-        count +=
+        currentValue = getCount().toInt()
+        count -= currentValue
     }
 }

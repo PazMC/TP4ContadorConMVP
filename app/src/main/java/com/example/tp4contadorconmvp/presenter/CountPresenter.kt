@@ -6,6 +6,7 @@ class CountPresenter(private val model: CountContract.Model, private val view: C
     CountContract.Presenter {
     init {
 
+        model.getCount()
         view.onIncreaseButtonPressed { onIncreaseButtonPressed() }
         view.onDecreaseButtonPressed { onDecreaseButtonPressed() }
         view.onResetButtonPressed { onResetButtonPressed() }
@@ -17,10 +18,10 @@ class CountPresenter(private val model: CountContract.Model, private val view: C
     }
 
     override fun onDecreaseButtonPressed() {
-        TODO("Not yet implemented")
         model.dec()
         view.setCount(model.getCount())
     }
+
     override fun onResetButtonPressed() {
         model.reset()
         view.setCount(model.getCount())
