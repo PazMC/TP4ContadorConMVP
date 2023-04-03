@@ -1,15 +1,15 @@
-package com.example.tp4contadorconmvp.contract
+package com.example.tp4contadorconmvp.mvp.contract
 
 interface CountContract {
 
     interface Model {
         fun getCount(): String
         fun reset()
-        fun inc()
-        fun dec()
+        fun inc(inputNumber: String)
+        fun dec(inputNumber: String)
     }
     interface View {
-        fun getCount(): String
+        fun inputNumber(): String
         fun setCount(count: String)
         fun onIncreaseButtonPressed(onClick: () -> Unit)
         fun onDecreaseButtonPressed(onClick: () -> Unit)

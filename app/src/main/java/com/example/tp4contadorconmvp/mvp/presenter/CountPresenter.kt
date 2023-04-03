@@ -1,24 +1,22 @@
-package com.example.tp4contadorconmvp.presenter
+package com.example.tp4contadorconmvp.mvp.presenter
 
-import com.example.tp4contadorconmvp.contract.CountContract
+import com.example.tp4contadorconmvp.mvp.contract.CountContract
 
 class CountPresenter(private val model: CountContract.Model, private val view: CountContract.View) :
     CountContract.Presenter {
     init {
-
-        model.getCount()
         view.onIncreaseButtonPressed { onIncreaseButtonPressed() }
         view.onDecreaseButtonPressed { onDecreaseButtonPressed() }
         view.onResetButtonPressed { onResetButtonPressed() }
     }
 
     override fun onIncreaseButtonPressed() {
-        model.inc()
+        model.inc(view.inputNumber())
         view.setCount(model.getCount())
     }
 
     override fun onDecreaseButtonPressed() {
-        model.dec()
+        model.dec(view.inputNumber())
         view.setCount(model.getCount())
     }
 

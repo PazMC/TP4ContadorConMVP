@@ -1,4 +1,4 @@
-package com.example.tp4contadorconmvp.view.base
+package com.example.tp4contadorconmvp.mvp.view.base
 
 import android.app.Activity
 import android.content.Context

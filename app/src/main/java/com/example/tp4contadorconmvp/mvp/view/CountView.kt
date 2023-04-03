@@ -1,9 +1,9 @@
-package com.example.tp4contadorconmvp.view
+package com.example.tp4contadorconmvp.mvp.view
 
 import android.app.Activity
-import com.example.tp4contadorconmvp.contract.CountContract
 import com.example.tp4contadorconmvp.databinding.ActivityMainBinding
-import com.example.tp4contadorconmvp.view.base.ActivityView
+import com.example.tp4contadorconmvp.mvp.contract.CountContract
+import com.example.tp4contadorconmvp.mvp.view.base.ActivityView
 
 class CountView(activity: Activity) : ActivityView(activity), CountContract.View {
     private var binding: ActivityMainBinding = ActivityMainBinding.inflate(activity.layoutInflater)
@@ -12,7 +12,9 @@ class CountView(activity: Activity) : ActivityView(activity), CountContract.View
         activity.setContentView(binding.root)
     }
 
-    override fun getCount() = binding.numberUser.text.toString()
+    override fun inputNumber(): String {
+        return binding.numberUser.text.toString()
+    }
 
     override fun setCount(count: String) {
         binding.counterResult.text = count
